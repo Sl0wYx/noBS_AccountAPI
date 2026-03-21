@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/accounts/{discord_id}")
+def get_account(discord_id: int):
+     with open("accounts.aof", mode='r', encoding='utf-8-sig') as accounts:
+        for line in accounts:
+            word = line.split()
+            if str(discord_id) == word[0]:
+                return {"DiscordID": int(word[0]),
+                        "PlayerUUID": str(word[1])}
+
+        return {"Error": "Account with that ID does not exist"}
+
+
+
+
