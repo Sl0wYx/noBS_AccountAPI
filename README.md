@@ -1,4 +1,4 @@
-# noBS_AccountAPI
+# noBS_ServerAPI
 REST API that links Discord accounts to Minecraft UUIDs.
 
 ## Backstory
