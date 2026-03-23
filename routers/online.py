@@ -5,7 +5,7 @@ from routers.stats import get_all_player_stats_by_name
 router = APIRouter()
 
 
-@router.get('/online')
+@router.get('/online', tags=["online"])
 def get_online_players():
     with open('data/stats.json', 'r', encoding='utf-8') as online_file:
         reader = json.load(online_file)

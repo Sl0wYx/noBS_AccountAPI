@@ -24,7 +24,7 @@ def get_all_player_stats(uuid: str):
 
         return {"Error": "Account with that UUID does not exist"}
 
-@router.get('/stats_name/{player_name}')
+@router.get('/stats_name/{player_name}', tags=['stats'])
 def get_all_player_stats_by_name(player_name: str):
     with open('data/stats.csv', 'r', newline='') as stats_file:
         reader = csv.DictReader(stats_file)
