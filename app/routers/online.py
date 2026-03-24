@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.get('/online', tags=["online"])
 def get_online_players():
-    with open('data/stats.json', 'r', encoding='utf-8') as online_file:
+    with open('app/data/stats.json', 'r', encoding='utf-8') as online_file:
         reader = json.load(online_file)
         player_names = list(reader['online'].keys())
         online = set()
