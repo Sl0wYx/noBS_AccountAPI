@@ -1,6 +1,6 @@
 services:
   myapi:
-    image: myapi
+    build: .
     ports:
       - "8000:8080"
     env_file:
