@@ -5,11 +5,10 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 
-load_dotenv("app/data/private")
+load_dotenv(Path("app/data/private/.env"))
 
 API_TOKEN = os.getenv("API_TOKEN")
 router = APIRouter()
-
 @router.get("/get_message", tags=["telegram"])
 async def get_message():
     with open("app/data/message.json", mode='r', encoding='utf-8-sig') as message:
