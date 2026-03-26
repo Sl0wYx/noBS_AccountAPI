@@ -17,3 +17,8 @@ venv/
 
 # OS
 .DS_Store
+
+
+#else
+app/data
+app/data/private
