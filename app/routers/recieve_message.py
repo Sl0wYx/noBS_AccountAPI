@@ -14,7 +14,7 @@ router = APIRouter()
 @router.get("/get_image/{date}", tags=["telegram"])
 async def get_image(date : str):
     date_str = str(date.replace(" ", "_").replace(":", "-"))
-    local_url = Path(f"data/images/{date_str}.png")
+    local_url = Path(f"app/data/images/{date_str}.png")
 
     if not local_url.exists():
         raise HTTPException(status_code=404, detail="Image not found")
