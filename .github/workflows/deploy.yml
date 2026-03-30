@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Create ssh file
       run : |
-        echo $AZURE_SSH_KEY > ./azure_key.pem
+        echo "$AZURE_SSH_KEY" > ./azure_key.pem
         chmod 600 ./azure_key.pem
     - name: Pull and deploy docker on Azure
       run : |
