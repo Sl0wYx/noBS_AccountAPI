@@ -32,5 +32,5 @@ jobs:
             git clean -fd -e app/data
             
             docker pull ghcr.io/sl0wyx/nobs_serverapi:latest
-            docker compose up -d --build
+            docker compose up -d && exit
           EOF
