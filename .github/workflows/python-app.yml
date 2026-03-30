@@ -14,9 +14,9 @@ permissions:
 
 jobs:
   build:
-
+    
     runs-on: ubuntu-latest
-
+    env: API_TOKEN: ${{ secrets.API_TOKEN }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
